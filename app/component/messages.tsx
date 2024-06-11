@@ -17,6 +17,7 @@ const Messages = ({ messages, isLoading }: Props) => {
       {messages.map((m, index) => {
         return (
           <div
+            key={index} // Add key prop here
             className={`p-4 text-black shadow-md rounded-md ml-10 relative ${
               m.role === "user" ? "bg-stone-300" : ""
             }`}
